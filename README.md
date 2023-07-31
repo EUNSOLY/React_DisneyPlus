@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# React_DisneyPlus Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 👉 [데모]()
 
-## Available Scripts
+## Mokup
 
-In the project directory, you can run:
+<img src=""/>
 
-### `npm start`
+### 🖐 프로젝트 목적
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. React 프레임워크 연습
+2. https://www.themoviedb.org API 사용
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🖐 프로젝트 내에서 사용한 라이브러리
 
-### `npm test`
+1. Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   > 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리로 밷엔드랑 프론트엔드랑 통신을 쉽게 하기 위해서 Ajax와 함께 사용한다. 현재 프로젝트에서는 많은량의 API호출이 진행되기때문에 axios 인스턴스를 생성하여 제작 진행
 
-### `npm run build`
+   ##### ※ axios 인스턴스란? HTTP 요청을 보낼 때 설정을 미리 지정한 객체
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Styled Component
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   > <a href="https://styled-components.com/docs/basics">StyledComponent 공홈링크</a> <br/> CSS in JS라고 하는 Js파일 안에서 CSS를 처리 할 수 있도록해주는 대표적인 라이브러리이다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ##### ※ 설치방법 : 1 &#41; npm install styled-components --save 2 &#41; yarn add styled-components
 
-### `npm run eject`
+   ##### ※ 사용방법 : const 사용할태그이름 = styled.생성할요소` 백틱내부에 스타일링작성진행`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ## styled-components Code 예시&#41;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   <img src="https://raw.githubusercontent.com/EUNSOLY/OnlyImage/3c1fce0111e53d1ec54d5e96aba18a6b04b74c29/ReactDiseny/%EC%8A%A4%ED%83%80%EC%9D%BC%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%82%AC%EC%9A%A9%EB%B2%95%201..png" alt="스타일컴포넌트사용예시1" />
+   <img src="https://raw.githubusercontent.com/EUNSOLY/OnlyImage/3c1fce0111e53d1ec54d5e96aba18a6b04b74c29/ReactDiseny/%EC%8A%A4%ED%83%80%EC%9D%BC%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%82%AC%EC%9A%A9%EB%B2%95%202..png" alt="스타일컴포넌트사용예시1"/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. dd
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 📌 개발 언어
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> <img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=react&logoColor=black"> 
+> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=black"/>
+> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white"/>
+> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white"/>
