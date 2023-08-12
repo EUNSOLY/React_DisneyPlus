@@ -28,13 +28,13 @@ const Logo = styled.a`
   }
 `;
 const Nav = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState("false");
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
-        setShow(true);
+        setShow("true");
       } else {
-        setShow(false);
+        setShow("false");
       }
     });
 
@@ -43,7 +43,8 @@ const Nav = () => {
     };
   }, []);
   return (
-    <NavWrapper show={show}>
+    //자꾸오류가 스타일컴포넌트 노란 오류 발생 $ 사용으로 대처
+    <NavWrapper $show={show}>
       <Logo>
         <img
           src="/images/logo.svg"
