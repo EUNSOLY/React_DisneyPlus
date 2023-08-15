@@ -10,6 +10,7 @@
 
 1. React 프레임워크 연습
 2. https://www.themoviedb.org API 사용
+3. ifame요소를 활용한 hyoutube.com 영상불러오기
 
 ### 🖐 프로젝트 내에서 사용한 라이브러리
 
@@ -62,7 +63,28 @@
    > startIndex: 반환할 부분 문자열의 시작 위치를 나타내는 정수 값  
    > endIndex: 반환할 부분 문자열의 끝 위치를 나타내는 정수 값
 
-#### ※CSS 새롭게 알게 된 속성
+#### ※HTML 새롭게 사용해본 요소
+
+1. iframe
+   > HTML Inline Frame 요소이며 Inline Frame의 약어이다  
+   > 효과적으로 다른 HTML 페이지를 현재 페이지에 포함시키는 중첩된 브라우저로  
+   > iframe요소를 이요하면 해당 웹 페이지 안에서 어떠한 제한 없이 다른 페이지를 불러와서 삽입 할 수 있다.
+
+#### ※CSS 새롭게 사용해본 속성 및 속성 값
 
 1.  width : min-content
     > 해당 요소의 내용(content)을 최소한의 너비로 설정하도록 지정되는 속성값으로 내용의 길이에 따라 요소의 너비가 동적으로 결정되며, 내용이 얼마나 길든 해당 내용을 모두 수용할 수 있도록 요소의 크기가 조정한다.
+2.  background-clip: 배경이 테두리, 안쪽 여백, 콘텐츠 상자 중 어디까지 차지할 지 지정
+    > border-box : border, padding 부분까지 이미지가 보여짐 (기본값 )
+    > padding-box : border 부분은 이미지가 보여지지 않음  
+    > content-box : 여백(padding, border)을 제외한 content의 크기 만큼만 이미지가 보여지며 (현재 프로젝트에서 사용한 속성값)  
+    > background-clip: text; / -webkit-background-clip: text; / color: transparent; 등등 있다  
+    > <a href="https://developer.mozilla.org/ko/docs/Web/CSS/background-clip">※background-clipMDN공식문서 참고</a>
+
+---
+
+- Youtube 영상가져오기(이미지첨부 확인)
+
+  <img src="https://raw.githubusercontent.com/EUNSOLY/OnlyImage/main/ReactDiseny/%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%20%ED%8D%BC%EC%98%A4%EA%B8%B0%201..png" alt="유튜브 영상가져오기1" >
+
+  <img src="https://github.com/EUNSOLY/OnlyImage/blob/main/ReactDiseny/%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%20%ED%8D%BC%EC%98%A4%EA%B8%B0%202.png?raw=true" alt="유튜브 영상가져오기2" >

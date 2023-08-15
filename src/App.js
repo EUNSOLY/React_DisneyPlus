@@ -1,8 +1,34 @@
 import { styled } from "styled-components";
+import requests from "./Api/requests";
 import "./App.css";
 import Nav from "./Components/Nav";
 import Banner from "./Components/Banner";
+import Category from "./Components/Category";
+import Row from "./Components/Row";
 
+function App() {
+  return (
+    <Container>
+      <Nav />
+      <Banner />
+      <Category />
+      <Row title="Trending Now" id="TN" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" id="TR" fetchUrl={requests.fetchTopRated} />
+      <Row
+        title="Action Movies"
+        id="AM"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        title="Comedy Movies"
+        id="CM"
+        fetchUrl={requests.fetchComedyMovies}
+      />
+    </Container>
+  );
+}
+
+export default App;
 const Container = styled.main`
   position: relative;
   min-height: calc(100vh - 250px);
@@ -20,13 +46,3 @@ const Container = styled.main`
     z-index: -1;
   }
 `;
-function App() {
-  return (
-    <Container>
-      <Nav />
-      <Banner />
-    </Container>
-  );
-}
-
-export default App;
