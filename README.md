@@ -1,10 +1,8 @@
 # React_DisneyPlus Clone
 
-### 👉 [데모](https://react-disney-plus-app-ab04b.firebaseapp.com/)
+### Mokup 👉 [데모사이트바로가기](https://react-disney-plus-app-ab04b.firebaseapp.com/)
 
-## Mokup
-
-<img src=""/>
+![Alt text](image.png)
 
 <br/>
 <br/>
