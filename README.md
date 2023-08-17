@@ -2,7 +2,7 @@
 
 ### Mokup 👉<a href="https://react-disney-plus-app-ab04b.firebaseapp.com/" target="_blank"> 데모사이트 바로가기</a>
 
-![Alt text](image.png)
+![Alt text](./public/images/ReadmeImage/image.png)
 
 <br/>
 <br/>
@@ -151,22 +151,22 @@
 1. firebaseTool설치하기 : 로컬에서 1번만 진행하면됨
    > npm i -g firebase-tools
 2. fireBase 원격로그인하기 : firebase login(y)
-   > ![Alt text](image-2.png) > ![Alt text](firebase2.png)
+   > ![Alt text](./public/images/ReadmeImage/image-2.png) > ![Alt text](./public/images/ReadmeImage/firebase2.png)
    > npm run build
 3. firebase 초기화하기
 
    > firebase init
-   > ![Alt text](image-3.png) y
+   > ![Alt text](./public/images/ReadmeImage/image-3.png) y
    > 어떠한 기능을 사용할지 선택하라는 내용확인되는데 현재 프로젝트는 배포를위해 사용되기 때문에 Hosting (스페이스바 눌러서 체크 후 엔터)
-   > ![Alt text](image-4.png)
+   > ![Alt text](./public/images/ReadmeImage/image-4.png)
    > 프로젝트를 새로만들지 만들어진것을 사용할지 선택
-   > ![Alt text](image-5.png)
+   > ![Alt text](./public/images/ReadmeImage/image-5.png)
    > 연결할 프로젝트 선택
-   > ![Alt text](image-6.png)
+   > ![Alt text](./public/images/ReadmeImage/image-6.png)
    > 호스팅을 위한 폴더작성
-   > ![Alt text](image-7.png)
+   > ![Alt text](./public/images/ReadmeImage/image-7.png)
    > 배포를 위한 설정 마지막 단계
-   > ![Alt text](image-8.png)
+   > ![Alt text](./public/images/ReadmeImage/image-8.png)
 
 4. 배포하기(배포를 하기위한 설정은 완료상태)
    > firebase deploy
