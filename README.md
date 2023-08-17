@@ -1,6 +1,6 @@
 # React_DisneyPlus Clone
 
-### 👉 [데모]()
+### 👉 [데모](https://react-disney-plus-app-ab04b.firebaseapp.com/)
 
 ## Mokup
 
@@ -146,3 +146,27 @@
   <img src="https://raw.githubusercontent.com/EUNSOLY/OnlyImage/main/ReactDiseny/%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%20%ED%8D%BC%EC%98%A4%EA%B8%B0%201..png" alt="유튜브 영상가져오기1" >
 
   <img src="https://github.com/EUNSOLY/OnlyImage/blob/main/ReactDiseny/%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%20%ED%8D%BC%EC%98%A4%EA%B8%B0%202.png?raw=true" alt="유튜브 영상가져오기2" >
+
+- fireBase를 이용한 배포과정
+
+1. firebaseTool설치하기 : 로컬에서 1번만 진행하면됨
+   > npm i -g firebase-tools
+2. fireBase 원격로그인하기 : firebase login(y)
+   > ![Alt text](image-2.png) > ![Alt text](firebase2.png)
+3. React Project 빌드하기
+   > npm run build
+4. firebase 초기화하기
+
+   > firebase init
+   > ![Alt text](image-3.png) y
+   > 어떠한 기능을 사용할지 선택하라는 내용확인되는데 현재 프로젝트는 배포를위해 사용되기 때문에 Hosting (스페이스바 눌러서 체크 후 엔터)
+   > ![Alt text](image-4.png)
+   > 프로젝트를 새로만들지 만들어진것을 사용할지 선택
+   > ![Alt text](image-5.png)
+   > 연결할 프로젝트 선택
+   > ![Alt text](image-6.png)
+   > 호스팅을 위한 폴더 선택
+   > ![Alt text](image-7.png) > ![Alt text](image-8.png)
+
+5. 배포하기(배포를 하기위한 설정은 완료상태)
+   > firebase deploy
