@@ -236,6 +236,12 @@ a {
 .modal__content {
   padding: 40px;
   color: #fff;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.modal__content::-webkit-scrollbar {
+  display: none;
+  visibility: hidden;
 }
 .modal__title {
   padding: 0;

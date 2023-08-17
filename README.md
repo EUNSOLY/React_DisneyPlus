@@ -73,6 +73,19 @@
 
 <br/>
 
+### ☑️ 프로젝트 내 사용된 React-Hooks
+
+1. useEffect : 컴포넌트의 렌더링 사이클에서 특정 작업을 수행하거나 부수 효과(side effect)를 처리하는데 사용
+2. useState : 컴포넌트의 상태(state)를 관리하는데 사용
+3. useLocation : 현재 페이지의 URL 정보를 제공하는데 사용됩니다. React Router에서 사용
+4. useNavigate : React Router에서 특정 경로로 이동시키는 함수를 반환
+5. useCallback : 함수를 메모이제이션하여 성능을 최적화하는데 사용
+6. useDebounce : 입력값에 대한 디바운싱 기능을 구현하는데 사용(Custom Hooks)
+7. useParams : React Router 라이브러리의 일부로 제공, 현재 URL의 경로 매개변수를 추출할 때 사용
+8. useRef : React 컴포넌트에서 DOM 요소나 변수를 참조할 때 사용
+
+   <br/>
+
 ### ☑️ HTML 새롭게 사용해본 요소
 
 1. iframe
@@ -108,7 +121,7 @@
 2. scrollLeft : Element가 가지고 있는 속성으로 요소의 콘텐츠가 왼쪽 가장자리에서 스크롤되는 픽셀수를 가져오거나 변경할 수 있음
    <img src="https://github.com/EUNSOLY/OnlyImage/blob/main/ReactDiseny/%EC%8A%A4%ED%81%AC%EB%A1%A4.png?raw=true" alt="스크롤" >
 
-3. WebAPI : URLSearchParams <a href="https://eunsoly.tistory.com/54"> 🔗추 가 정리 Tistory</a>
+3. WebAPI : URLSearchParams <a href="https://eunsoly.tistory.com/54"> 🔗추가정리 Tistory</a>
    ![Alt text](image.png)
 
 <br/>

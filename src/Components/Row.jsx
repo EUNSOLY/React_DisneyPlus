@@ -18,6 +18,7 @@ const Row = ({ title, id, fetchUrl }) => {
     setModalOpen(true);
     setMovieSelected(movie);
     console.log(movie, "무비쓰");
+    console.log(modalOpen, "여긴row");
   };
   return (
     <div>
@@ -58,7 +59,11 @@ const Row = ({ title, id, fetchUrl }) => {
         </div>
       </div>
       {modalOpen && (
-        <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
+        <MovieModal
+          modalOpen={modalOpen}
+          {...movieSelected}
+          setModalOpen={setModalOpen}
+        />
       )}
     </div>
   );
