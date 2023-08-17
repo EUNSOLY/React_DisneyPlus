@@ -1,6 +1,6 @@
 # React_DisneyPlus Clone
 
-### Mokup 👉 <a href="https://react-disney-plus-app-ab04b.firebaseapp.com/" target="_blank">데모사이트 바로가기</a>
+### Mokup 👉<a href="https://react-disney-plus-app-ab04b.firebaseapp.com/" target="_blank"> 데모사이트 바로가기</a>
 
 ![Alt text](image.png)
 
@@ -152,9 +152,8 @@
    > npm i -g firebase-tools
 2. fireBase 원격로그인하기 : firebase login(y)
    > ![Alt text](image-2.png) > ![Alt text](firebase2.png)
-3. React Project 빌드하기
    > npm run build
-4. firebase 초기화하기
+3. firebase 초기화하기
 
    > firebase init
    > ![Alt text](image-3.png) y
@@ -164,8 +163,10 @@
    > ![Alt text](image-5.png)
    > 연결할 프로젝트 선택
    > ![Alt text](image-6.png)
-   > 호스팅을 위한 폴더 선택
-   > ![Alt text](image-7.png) > ![Alt text](image-8.png)
+   > 호스팅을 위한 폴더작성
+   > ![Alt text](image-7.png)
+   > 배포를 위한 설정 마지막 단계
+   > ![Alt text](image-8.png)
 
-5. 배포하기(배포를 하기위한 설정은 완료상태)
+4. 배포하기(배포를 하기위한 설정은 완료상태)
    > firebase deploy
