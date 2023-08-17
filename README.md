@@ -1,6 +1,6 @@
 # React_DisneyPlus Clone
 
-### Mokup 👉 [데모사이트바로가기](https://react-disney-plus-app-ab04b.firebaseapp.com/)
+### Mokup 👉 <a href="https://react-disney-plus-app-ab04b.firebaseapp.com/" target="_blank">데모사이트 바로가기</a>
 
 ![Alt text](image.png)
 
@@ -12,6 +12,7 @@
 1. React 프레임워크 연습
 2. https://www.themoviedb.org API 사용
 3. ifame요소를 활용한 hyoutube.com 영상불러오기
+4. firebase를 이용한 로그인구현 및 배포
 
 ### 📌 개발 언어
 
