@@ -27,7 +27,6 @@ const Row = ({ title, id, fetchUrl }) => {
     setModalOpen(true);
     setMovieSelected(movie);
     console.log(movie, "무비쓰");
-    console.log(modalOpen, "여긴row");
   };
   return (
     <Container>
@@ -72,11 +71,7 @@ const Row = ({ title, id, fetchUrl }) => {
         </Content>
       </Swiper>
       {modalOpen && (
-        <MovieModal
-          modalOpen={modalOpen}
-          {...movieSelected}
-          setModalOpen={setModalOpen}
-        />
+        <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
       )}
     </Container>
   );
