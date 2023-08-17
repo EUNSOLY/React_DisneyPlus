@@ -181,6 +181,27 @@ a {
   transform: scale(1.08);
 }
 
+.swiper-pagination {
+  text-align: right !important;
+}
+.swiper-pagination-bullet {
+  background: gray !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+.swiper-button-prev {
+  color: white !important;
+}
+.swiper-button-next {
+  color: white !important;
+}
+.swiper-button-prev::after,
+.swiper-button-prev::after {
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+}
 @media screen and (min-width: 1200px) {
   .row__poster {
     max-height: 160px;
