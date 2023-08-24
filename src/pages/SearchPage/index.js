@@ -21,7 +21,6 @@ const SearchPage = () => {
       const response = await axios.get(
         `/search/multi?include_adult=false&query=${searchTerm}`
       );
-      console.log("response정보내용", response);
       setSearchResults(response.data.results);
     } catch (error) {
       console.log(error);

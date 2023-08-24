@@ -26,7 +26,6 @@ const Row = ({ title, id, fetchUrl }) => {
   const handleClick = (movie) => {
     setModalOpen(true);
     setMovieSelected(movie);
-    console.log(movie, "무비쓰");
   };
   return (
     <Container>

@@ -21,7 +21,7 @@ const Banner = () => {
     const { data: movieDetail } = await axios.get(`movie/${movieId}`, {
       params: { append_to_response: "videos" },
     });
-    console.log(movieDetail);
+
     setMovie(movieDetail);
   };
   const truncate = (str, n) => {

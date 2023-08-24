@@ -170,3 +170,7 @@
 
 4. 배포하기(배포를 하기위한 설정은 완료상태)
    > firebase deploy
+
+---
+
+## Redux Toolkit 사용하기

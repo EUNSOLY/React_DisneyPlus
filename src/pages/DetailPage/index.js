@@ -9,7 +9,7 @@ const DetailPage = () => {
   useEffect(() => {
     async function fetchData() {
       const respense = await axios.get(`/movie/${movieId}`);
-      console.log(respense);
+
       setMovie(respense.data);
     }
 
