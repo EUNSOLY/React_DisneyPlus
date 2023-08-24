@@ -21,7 +21,6 @@ const Nav = () => {
 
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.user);
-
   const initialUserData = localStorage.getItem("userData")
     ? JSON.parse(localStorage.getItem("userData"))
     : {};
@@ -78,6 +77,7 @@ const Nav = () => {
       })
       .catch((err) => console.log(err));
   };
+
   return (
     //자꾸오류가 스타일컴포넌트 노란 오류 발생 $ 사용으로 대처
     <NavWrapper $show={show}>

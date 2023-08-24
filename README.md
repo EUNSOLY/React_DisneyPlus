@@ -173,4 +173,125 @@
 
 ---
 
-## Redux Toolkit 사용하기
+## LocalStorage 사용하여 저장한 userData를 Redux Toolkit 사용해서 변경하기
+
+1. Store 폴더 및 기본 파일 생성
+
+   ![Store](./public/images/ReadmeImage/Store.png)
+
+2. createSlice함수 사용하여 action과 reducer 정의해주기  
+   ※userSlice.js  
+    ![createSlice함수](./public/images/ReadmeImage/createSlice.png)
+
+3. store 생성해주기  
+   ※ store / index.js  
+   ![storeCreate](./public/images/ReadmeImage/storeCreate.png)
+
+4. Provider로 App 컴포넌트 감싸주면서 생성된 store 전달해주기  
+   (이로써 App 컴포넌트 하위 전 컴포넌트 redux 사용가능)  
+   ※ src / index.js  
+   ![Provider](./public/images/ReadmeImage/Provider.png)
+
+5. dispatch를 사용하여 action 데이터 reducer로 보내기  
+    ※ useDispatch 및 사용할 정의 된 action 가져오기 그래야 사용가능
+
+   ```
+   import { useDispatch } from "react-redux";
+   import { setUser, removeUser } from "../store/useSlice";
+   ```
+
+   ![dispatch](./public/images/ReadmeImage/dispatch.png)
+   ![dispatch2](./public/images/ReadmeImage/dispatch2.png)
+
+6. useSeleter사용해서 store에 저장된 데이터 사용하기
+   ※ useSeleter사용해서 및 사용할 정의 된 action 가져오기 그래야 사용가능
+
+```
+import { useSelector } from "react-redux";
+```
+
+![useSeleter](./public/images/ReadmeImage/useSeleter.png)
+
+### LocalStorage를 미사용하고 Redux로 사용 시 새로고침 하면 데이터가 사라지는 현상이 발생 이런 문제점을 해결하기위해 Redux-Persist 라이브러리 사용하기
+
+> ### redux-persist란? 상태를 지속적으로 유지하고 저장하는 데 사용되는 라이브러리
+
+1. redux-persist 설치
+
+```
+npm i redux-persist
+```
+
+2. Redux Persist 구성
+   ※ persistReducer 함수를 사용하여 리덕스 스토어의 리듀서를 감싸고, 지속성을 유지하도록 설정
+
+```
+store/ index.js
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import userSlice from "./useSlice";
+import storage from "redux-persist/lib/storage"; // redux-persist에서 기본제공되는 스토리지 사용
+// redux-persist-localstorage 라이브러리도 설치하여 사용가능
+
+// root Redux 만들기
+const rootReducer = combineReducers({
+  user: userSlice,
+});
+
+// Redux Persist 설정
+const persistConfig = {
+  key: "root", // 저장할 상태를 구분하는 키
+  storage: storage, // 사용할 스토리지 (로컬 스토리지 등)
+   whitelist: ["user"], // 여러 reducer가 있다면 그중 작성된 reducer만 유지  (선택 사항)
+   blacklist : ["not"] // 작성된 reducer만 제외
+};
+
+// 리덕스 퍼시스트 리듀서 생성
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+// 스토어 생성
+export const store = configureStore({
+  reducer: persistedReducer,
+});
+export const persistor = persistStore(store);
+
+```
+
+3. 스토어 및 앱에 Redux Persist 적용  
+   ※ PersistGate 컴포넌트는 리덕스 스토어의 상태가 복원될 때까지 앱을 로딩 상태로 유지
+
+![PersistGate](./public/images/ReadmeImage/PersistGate.png)
+
+> ### 위와 같은 코드 작성 시 아래 이미지와 같은 오류 발생
+>
+> ![persistError](./public/images/ReadmeImage/persistError.png)
+
+> ### Error가 발생하는 이유는 action에 직렬화가 불가능한 값을 전달했기 때문에 발생
+>
+> 직렬화 : object 값을 string값으로 변환 (JSON.stringify)
+> 역직렬화 : string 값을 object로 변환 (JSON.parse)
+> Redux는 state, action에 직렬화가 불가능한 값을 전달할 수 없는데 전달하려고 해서 에러가 발생하는 것
+> 직렬화가 불가능한 값 전달 허락 할 수 있도록 추가 코드 작성
+
+```
+export const store = configureStore({
+  reducer: persistedReducer,
+  // getDefaultMiddleware : 기본적으로 reduxtoolkit에서 제공하는 미들웨어를 받아온다.
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({ serializableCheck:false}),
+});
+
+또는
+
+export const store = configureStore({
+  reducer: persistedReducer,
+  // getDefaultMiddleware : 기본적으로 reduxtoolkit에서 제공하는 미들웨어를 받아온다.
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+```
+
+> Redux는 예상한대로 UI에 반영되게 하거나 Time Travel(복원기능)이나 올바른 디버깅을 위해서 직렬화 가능한 값을 저장하는 것을 추천하며 그것이 기본값이다. 그렇기 떄문에 위처럼 store에 미들웨어가 기본적으로 제공하는 true값을 false로 변경해주거나 특정 단어가 들어왔을 때는 허용해준다는 의미로 ignoreActions를 사용하여 데이터를 작성하여 사용하면 에러가 발생하지않고 사용이 가능하다.
